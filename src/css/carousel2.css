@@ -1,0 +1,78 @@
+.navsel{
+    display: flex;
+    justify-content: center;
+    /* background-color: black; */
+}
+
+.carouselNav{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-direction: row;
+}
+
+.carouselNav li{
+    display: flex;
+    list-style: none;
+    font-weight:bold;
+}
+
+.carouselContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    width: 90%;
+    overflow: hidden;
+}
+
+.carouselSubContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr);
+    gap: 1rem;
+    /* justify-content: center; */
+    /* flex-direction: row; */
+}
+
+.portaditas{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: rgb(243, 243, 243);
+    overflow: hidden;
+    border: solid rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: rgb(211, 211, 211) 0 0 1.2rem;
+    margin:6rem 0 6rem 0;
+    width: 16rem;
+    height: 14rem;
+    cursor: pointer;
+} 
+
+.portaditas p{
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: white solid;
+    border-top: white solid;
+    text-align: center;
+    width: 100%;
+    height: 2rem;
+    margin-bottom: -1rem;
+    font-weight: 500;
+}
+
+.imgPortadita{
+    object-fit: cover;
+    width: 100%;
+    height: 10rem;
+    transition: 0.3s;
+} 
+
+.imgPortadita:hover{
+    transform: scale(1.1);
+}
+
+.link2{
+    text-decoration: none;
+}

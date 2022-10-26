@@ -1,0 +1,136 @@
+.itemConainer{
+    width: 17rem;
+    height: 35em;
+    border: solid rgba(0, 0, 0, 0);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.164) 0 0 1rem;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.conainterImgItem{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 15rem;
+}
+
+.conainterImgItem p{
+    margin: 1rem;
+    font-size: smaller;
+    font-weight:600;
+}
+
+.imgItem{
+    margin: auto;
+    width: 80%;
+    transition: 0.2s;
+}
+.imgItem:hover{
+    transform: scale(1.1);
+}
+
+.colorContainer{
+    display: flex;
+}
+
+.colorContainer p{
+    margin: 1rem;
+    font-size: smaller;
+    font-weight:600;
+}
+
+.colorContainer .color{
+    display: flex;
+    align-self: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 100%;
+    border: solid;
+    border-width:thin;
+    cursor: pointer;
+}
+
+.colorContainer .color .filling{
+    margin: auto;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    border: solid black;
+    border-width: thin;
+    box-shadow: rgba(0, 0, 0, 0.421) 0 0 0.2rem;
+}
+
+.itemDescription{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 15rem;
+}
+
+.itemDescription button{
+    border: solid black;
+    border-width: thin;
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 2rem;
+    transition: 0.2s;
+}
+
+.itemDescription button:hover{
+    background-color: #f1f1f1;
+}
+
+.itemDescription button .linkButtom{
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+
+.itemDescription .infoItem{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-top:solid rgba(0, 0, 0, 0.519);
+    border-bottom: solid rgba(0, 0, 0, 0.518);
+    border-width: thin;
+    width: 95%;
+    height: 10rem;
+    margin: 1.3rem;
+    overflow: scroll;
+}
+
+.itemDescription .infoItem::-webkit-scrollbar{
+    width: 3px;
+}
+
+.itemDescription .infoItem::-webkit-scrollbar-thumb{
+    background-color:rgba(0, 0, 0, 0.114)
+}
+
+.itemDescription .infoItem::-webkit-scrollbar-track{
+    background-color:rgba(0, 0, 0, 0);
+
+}
+
+.itemDescription .infoItem::-webkit-scrollbar-button{
+    display: none;
+}
+
+.itemDescription .infoItem{
+    overflow-x: hidden;
+}
+
+.itemDescription .infoItem ul li{
+    margin: 1rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.ContainerCategory{
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr);
+    margin: 1rem 0 0 0;
+}

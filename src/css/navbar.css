@@ -1,0 +1,75 @@
+.navbarContainer{
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom:solid rgba(0, 0, 0, 0);
+    text-align: center;
+    height: 3.5rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo{
+    margin: -2rem 0 0 3rem ;
+    width: 7rem;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+.nav{
+    margin: auto;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 0.9rem;
+    list-style: none;
+    gap: 6rem;
+    margin-top: 1rem;
+}
+
+.nav ul li .link{
+    text-decoration: none;
+    color: black;
+    font-weight:bold;
+    transition: 0.2s;
+}
+
+.nav ul li .link:hover{
+   color: rgb(64, 64, 162);
+}
+
+.contenedorCarrito{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.contenedorCarrito:hover{
+    transform: scale(1.2);
+}
+
+.contenedorCarrito p{
+    text-align: center;
+    background-color: red;
+    border-radius: 100%;
+    width: 0.9rem;
+    font-size: 0.7rem;
+    position: absolute;
+    margin: -2rem 0 0 1rem;
+    color: white;
+}
+
+.carrito{
+    width: 1.5rem;
+    cursor: pointer;
+}

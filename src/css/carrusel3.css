@@ -1,0 +1,348 @@
+.containerCarru{
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 3rem 0;
+}
+
+.subContainerCarru{
+    margin: 0 0 0 -15rem;
+    display: flex;
+    width: 60rem;
+}
+
+.subContainerCarru div{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.carousel{
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+
+.control-arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto !important;
+    background-color: rgba(9, 36, 100, 0) !important;
+    filter: invert();
+    height: 5rem;
+    width: 3rem;
+}
+
+.control-arrow:hover{
+    background-color: rgba(9, 36, 100, 0) !important;
+}
+
+.thumbs-wrapper{
+    width: 20rem;
+    margin: 1rem;
+    
+}
+
+.axis-vertical{
+    margin: 1rem;
+}
+
+.thumbs-wrapper ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 5rem;
+    height: 25rem;
+    padding: 0;
+}
+
+.thumbs{
+    display: flex; 
+    flex-direction: column;
+}
+
+.thumb{
+    width: 100px !important;
+    border: solid rgba(0, 0, 0, 0.223) !important;
+    border-width: thin !important;
+}
+
+.thumb:hover{
+    border-color: rgba(0, 0, 0, 0.529) !important;
+}
+
+.slider{
+    width: 25rem;
+}
+
+.DetalleProduct{
+    margin: 2rem 0 0 0;
+    width: 50%;
+}
+
+.DetalleProductName{
+    margin: 1rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.DetalleProductPlanRecambio{
+    border: solid rgb(242, 242, 242);
+    background-color: rgb(241, 241, 241);
+    width: 27rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    
+}
+
+.DetalleProductPlanRecambio p{
+    font-size: 65%;
+    margin: 1rem;
+    font-weight: 600;
+}
+
+.DetalleProductPlan{
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+.DetalleProductColores{
+    margin: 1rem;
+}
+
+.DetalleProductColores p{
+    font-weight: 600;
+    font-size: 0.7rem;
+    
+}
+
+.DetalleProductColor{
+    border: solid rgb(17, 17, 135);
+    width: 3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.DetalleProductColor:hover{
+    background-color: rgba(39, 39, 155, 0.459);
+}
+
+.DetalleProductColor p{
+    margin: 0;
+}
+
+.DetalleProductPlanRecambio2{
+    margin: 1rem;
+}
+
+.DetalleProductPlanRecambio2 p{
+    font-weight: 600;
+    font-size: 0.7rem;
+}
+
+.DetalleProductNo{
+    border: solid rgb(17, 17, 135);
+    width: 3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.DetalleProductNo p{
+    margin: 0;
+}
+
+.precioDelProductoH3{
+    margin: 2rem 1rem 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+.precioDelProductoPrice{
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: solid rgba(0, 0, 0, 0.208);
+    border-width: thin;
+    width: 80%;
+    height: 5rem;
+    margin: 1rem;
+    box-shadow: rgba(97, 97, 97, 0.193) 0 0 0.3rem;
+}
+
+.DetalleProductoComprar{
+    background-color: rgb(9, 9, 133);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4rem;
+    border-color: rgb(9, 9, 133);
+    width: 80%;
+    height: 2.8rem;
+    color: white;
+    margin: 1rem;
+    text-align: center;
+    padding: 0.8rem;
+}
+
+.containerVar{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: black;
+    width: 85%;
+    height: 3.5rem;
+    margin: 1.5rem auto 1rem auto;
+}
+
+.semiVarBackground{
+    height: 3.5rem;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.semiVar{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.semiVar .namePriceVar{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0.6rem;
+}
+
+.semiVar .nameCelVar{
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.nameButtonVar{
+    background-color: rgb(65, 117, 207);
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 600;
+    width: 17%;
+    height: 100%;
+    border: solid rgb(65, 117, 207);
+}
+
+.containerVarScroll{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    height: 3.5rem;
+    z-index: 1;
+}
+
+.kter{
+    width: 4rem;
+    height: 4rem;
+}
+
+.containerKter{
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr);
+}
+
+.containerKter div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 15rem;
+    margin: 2rem;
+}
+
+.containerSubpor1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin:  3rem auto auto auto;
+    gap: 2rem;
+}
+
+.containerSubpor1 img{
+    width: 97%;
+    margin: auto;
+}
+
+.containerSubpor1 h1, p{
+    text-align: center;
+    margin: 3rem;
+}
+
+.containerSubpor2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin:  3rem auto auto auto;
+    gap: 2rem;
+}
+
+.containerSubpor2 img{
+    width: 97%;
+    margin: auto;
+}
+
+.containerSubpor2 h1, p{
+    text-align: center;
+    margin: 3rem;
+}
+
+.containertSub{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.containertSub .sub1{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 3rem;
+}
+
+.containertSub .sub1 img{
+    width: 40rem;
+}
+
+.containertSub .sub1 div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   text-align: center;
+   margin: 2rem;
+}
+
+.containertSub .sub1 div h3, p{
+    margin: 2rem;
+}
+
+.containertSub .sub2{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin: 3rem;
+}
+
+.containertSub .sub2 img{
+    width: 40rem;
+}
+
+.containertSub .sub2 div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   text-align: center;
+   margin: 2rem;
+}
+
+.containertSub .sub2 div h3, p{
+    margin: 2rem;
+}
