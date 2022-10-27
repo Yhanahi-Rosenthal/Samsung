@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import '../css/carrusel3.css';
+import { CartContext } from "./CartContext";
+import Cart from "./Cart";
+import ItemCount from "./ItemCount";
 
 function Detail({AItem}){
+
+    const[cantidad, setCantidad] = useState(1)
+    const{isInCart, addItem} = useContext(CartContext)
+    const onAdd = () =>{
+        isInCart(AItem.id)
+        addItem(AItem, cantidad)
+    }
 
     const [nav, setNav] = useState("containerVar")
     
@@ -15,7 +25,6 @@ function Detail({AItem}){
             setNav('containerVar')
         }
     })
-    
 
     return(
         <>
@@ -26,12 +35,10 @@ function Detail({AItem}){
                         <p className="nameCelVar">{AItem.name}</p>
                         <p className="namePriceVar">US$ {AItem.price}</p>
                     </div>
-                    <button className="nameButtonVar">COMPRAR</button>
+                    <button className="nameButtonVar" onClick={()=>{onAdd()}}>COMPRAR</button>
                 </div>
                 </div>
-                
- 
-                
+              
                 <div className="containerCarru">
                     <div className="subContainerCarru">
                         <Carousel showStatus={false} showIndicators={false}>
@@ -76,10 +83,13 @@ function Detail({AItem}){
                                 
                             </div>
                             <div>
-                                <h3 className="precioDelProductoH3">PRECIO DEL PRODUCTO</h3>
+                                <div className="containerCountDetail">
+                                    <h3 className="precioDelProductoH3">PRECIO DEL PRODUCTO</h3>  
+                                    <ItemCount cantidad={cantidad} setCantidad={setCantidad} onAdd={onAdd} AItem={AItem} />
+                                </div>
                                 <p className="precioDelProductoPrice">US$ {AItem.price}</p>
                             </div>
-                            <button className="DetalleProductoComprar">COMPRAR</button>
+                            <button className="DetalleProductoComprar" onClick={()=>{onAdd()}}>COMPRAR</button>
                         </div>
                     </div>
                 </div>

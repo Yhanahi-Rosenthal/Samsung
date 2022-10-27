@@ -2,9 +2,13 @@ import samsung from '../img/samsung.png';
 import {Link} from 'react-router-dom';
 import carrito from '../img/carrito-de-compras.png';
 import '../css/navbar.css';
+import { CartContext } from './CartContext';
+import { useContext } from 'react';
+import CardWidget from './CartWidget';
 
 function Navbar(){
 
+   
     return(
         <>
             <div className='navbarContainer'>
@@ -17,7 +21,7 @@ function Navbar(){
                         <li><Link to='/category/TV' className='link'>TV's</Link></li>
                     </ul>
                 </nav>
-                <div className='contenedorCarrito'><Link to='/Cart'><img  src={carrito} className='carrito'/><p>1</p></Link></div>
+                <CardWidget />
             </div>
         </>
     )

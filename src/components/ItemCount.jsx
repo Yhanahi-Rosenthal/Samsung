@@ -1,16 +1,22 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import '../css/count.css';
+import { CartContext } from "./CartContext";
 
-function ItemCount(){
+function ItemCount({
+    cantidad,
+    setCantidad,
+    onAdd,
+    AItem
+}){
 
-    const[cantidad, setCantidad] = useState(1)
+    const {deleteItem} = useContext(CartContext)
 
     let restar = ()=>{
         let desde = 1
         if(cantidad > desde){
             setCantidad(cantidad - 1) 
         }else{
-            alert('no')
+            alert('La cantidad minima es uno')
         }
     }
 
@@ -19,7 +25,7 @@ function ItemCount(){
         if(cantidad < hasta){
             setCantidad(cantidad + 1)
         }else{
-            alert('no hay mas stock de este producto')
+            alert('No hay mas stock de este producto')
         }
     }
     return(

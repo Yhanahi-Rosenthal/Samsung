@@ -4,6 +4,9 @@
     flex-direction: row;
     align-items: center;
     margin: auto;
+    border: solid rgba(209, 209, 209, 0.678);
+    border-width: thin;
+    height: 2rem;
 }
 
 .containerCount .restar, .sumar{

@@ -60,10 +60,11 @@
 
 .contenedorCarrito p{
     text-align: center;
-    background-color: red;
+    background-color: rgb(0, 0, 0);
     border-radius: 100%;
     width: 0.9rem;
     font-size: 0.7rem;
+    font-weight: bold;
     position: absolute;
     margin: -2rem 0 0 1rem;
     color: white;

@@ -346,3 +346,7 @@
 .containertSub .sub2 div h3, p{
     margin: 2rem;
 }
+
+.containerCountDetail{
+    display: flex;
+}
