@@ -25,6 +25,7 @@
 
 .containerLoader{
   position: fixed;
+  z-index: 3;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -32,4 +33,5 @@
   width: 100%;
   background-color: rgb(255, 255, 255);
   height: 40rem;
+  /* top: 0; */
 }

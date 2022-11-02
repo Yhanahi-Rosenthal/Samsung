@@ -12,6 +12,7 @@ function Category(){
     const [products, setProducts] = useState(false)
     const [Loader, setLoader] = useState(true)
 
+
     useEffect(()=>{
         const db = getFirestore()
 
@@ -23,10 +24,7 @@ function Category(){
         .catch((rej)=>{
             console.log('hubo un error')
         })
-
-        setTimeout(() => {
-            setLoader(false)
-        }, 2500);  
+      
     },[])
 
 
@@ -34,7 +32,7 @@ function Category(){
         <>
             {Loader && <Loading />}
             <div className='ContainerCategory'>
-                {products && products?.filter(product => product.category.includes(category)).map(product => <Item key={product.id} product={product} />)}              
+                {products && products?.filter(product => product.category.includes(category)).map(product => <Item key={product.id} product={product} setLoader={setLoader} />)}              
             </div>
         </>  
     )

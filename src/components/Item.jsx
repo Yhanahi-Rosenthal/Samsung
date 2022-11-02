@@ -1,16 +1,20 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import LoadImg from './LoadImg';
 import '../css/item.css';
 
-function Item({product}){
+function Item({product, setLoader}){
 
     const [images, setImages] = useState(product.img1)
+    const[loadimg, setLoadimg] = useState(true)
 
     return(
         <>
-            <div className='itemConainer'>
-                <div className='conainterImgItem'>
-                    <img src={images} onMouseEnter={() =>{setImages(product.img2)}} onMouseOut={() =>{setImages(product.img1)}} className='imgItem'/>
+            <div className='itemConainer' onLoad={()=>{setLoader(false)}}>
+                <div className='conainterImgItem' onLoad={()=>{setLoadimg(false)}}>
+                    
+                    <img src={images} onMouseEnter={() =>{setImages(product.img2)}} onMouseOut={() =>{setImages(product.img1)}} className='imgItem' />
+                    {loadimg && <LoadImg />}
                     <p>{product.name}</p>
                 </div>
                 <div className="colorContainer">

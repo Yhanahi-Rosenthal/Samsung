@@ -14,6 +14,7 @@ function ItemDetail(){
     const [itens, setItens] = useState(false)
     const[loader, setLoader] = useState(true)
 
+
     useEffect(()=>{
             const db = getFirestore()
 
@@ -26,16 +27,13 @@ function ItemDetail(){
                 console.log('hubo un error')
             })
         
-        setTimeout(() => {
-            setLoader(false)
-        }, 2500);
     },[])
 
 
     return (
             <>
                 {loader && <Loading />}
-                {itens && itens?.filter(item => item.id.includes(id)).map(AItem => <Detail key={AItem.id} AItem={AItem} />)}
+                {itens && itens?.filter(item => item.id.includes(id)).map(AItem => <Detail key={AItem.id} AItem={AItem} setLoader={setLoader} />)}
             </>
            
            

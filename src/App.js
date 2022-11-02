@@ -8,6 +8,7 @@ import Category from './components/Category';
 import ItemDetail from './components/ItemDetail';
 import Cart from './components/Cart';
 import MyProvider from './components/CartContext';
+import CheckOut from './components/CheckOut';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path='/category/:category' element={<Category />} />
         <Route path='/Detail/:id' element={<ItemDetail />} />
         <Route path='/Cart' element={<Cart />} />
+        <Route path='/CheckOut' element={<CheckOut />} />
       </Routes>
     <Footer />
     </MyProvider>

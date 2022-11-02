@@ -3,17 +3,20 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import '../css/carrusel3.css';
 import { CartContext } from "./CartContext";
-import Cart from "./Cart";
 import ItemCount from "./ItemCount";
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 
-function Detail({AItem}){
+function Detail({AItem, setLoader}){
 
     const[cantidad, setCantidad] = useState(1)
-    const{isInCart, addItem} = useContext(CartContext)
+    const{isInCart, addItem, cart} = useContext(CartContext)
     const onAdd = () =>{
         isInCart(AItem.id)
         addItem(AItem, cantidad)
+        localStorage.setItem('cart', JSON.stringify(cart))
     }
+    localStorage.setItem('cart', JSON.stringify(cart))
 
     const [nav, setNav] = useState("containerVar")
     
@@ -26,16 +29,44 @@ function Detail({AItem}){
         }
     })
 
+
+    const ad = ()=>{
+        Toastify({
+            text: `Agregaste ${cantidad} ${AItem.name} a tu carrito`,
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: false,
+            gravity: "bottom", // `top` or `bottom`
+            position: "left", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "white",
+              boxShadow: "#171717d1 0 0 0.6rem",
+              color: "black",
+              fontWeight: "600",
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
+    }
+
+    
+
     return(
         <>
-            <div>
+            <div onLoad={()=>{setLoader(false)}}>
                 <div className='semiVarBackground'>
                 <div className={nav}>
                     <div className="semiVar">
                         <p className="nameCelVar">{AItem.name}</p>
                         <p className="namePriceVar">US$ {AItem.price}</p>
                     </div>
-                    <button className="nameButtonVar" onClick={()=>{onAdd()}}>COMPRAR</button>
+                    <button className="nameButtonVar" 
+                    onClick={()=>{
+                        onAdd()
+                        ad()    
+                    }}
+                    >COMPRAR</button>
                 </div>
                 </div>
               
@@ -89,7 +120,12 @@ function Detail({AItem}){
                                 </div>
                                 <p className="precioDelProductoPrice">US$ {AItem.price}</p>
                             </div>
-                            <button className="DetalleProductoComprar" onClick={()=>{onAdd()}}>COMPRAR</button>
+                            <button className="DetalleProductoComprar" 
+                            onClick={()=>{
+                                onAdd()
+                                ad()
+                            }}
+                            >COMPRAR</button>
                         </div>
                     </div>
                 </div>

@@ -27,10 +27,11 @@ const MyProvider = ({children}) =>{
         }else{
             setCart([...cart, newItem])
         }
+        
     }
 
     const deleteItem = (id) =>{
-        setCart(cart.filter(produc => produc.id !== id))
+        setCart(cart.filter(product => product.id !== id))
     }
 
     const emptyCart = () =>{
