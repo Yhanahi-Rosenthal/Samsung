@@ -134,3 +134,11 @@
     grid-template-columns: repeat(4, 0.5fr);
     margin: 1rem 0 0 0;
 }
+
+@media screen and (max-width: 768px) {
+    .ContainerCategory{
+        display: grid;
+        grid-template-columns: repeat(2, 0.5fr);
+        margin: 1rem 0 0 0;
+    }
+}

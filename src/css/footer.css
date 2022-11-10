@@ -89,3 +89,53 @@
 .containerEtc .paginas img:hover{
     transform: scale(1.05);
 }
+
+@media screen and (max-width: 768px){
+    .containerFooter{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .containerLink{
+        display: grid;
+        grid-template-columns: repeat(3, 0.5fr);
+        margin: 3rem;
+    }
+
+    .containerLink h3{
+        font-size: 1rem;
+        margin:0 1.2rem 1rem 0;
+    }
+    
+    .containerLink div a{
+        text-decoration: none;
+        color: black;
+        font-size: 0.7rem;
+        transition: 0.2s;
+    }
+
+    .containerEtc .legales p{
+        font-size: 0.5rem;
+        margin: 1rem;
+    }
+    
+    .containerEtc .legales a{
+        text-decoration: none;
+        color: black;
+        font-size: 0.5rem;
+        margin: 1rem;
+        transition: 0.2s;
+    }
+    .containerEtc .paginas p{
+        margin: auto;
+        font-weight: lighter;
+        font-size: 0.7rem;
+    }
+    .containerEtc .paginas img{
+        margin: auto;
+        width: 1.2rem;
+        cursor: pointer;
+        transition:0.2s;
+    }
+}

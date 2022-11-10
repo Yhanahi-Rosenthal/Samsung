@@ -76,3 +76,40 @@
 .link2{
     text-decoration: none;
 }
+
+@media screen and (max-width: 768px){
+    .carouselSubContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 0.5fr);
+        gap: 1rem;
+    }
+    
+    .portaditas{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        background-color: rgb(243, 243, 243);
+        overflow: hidden;
+        border: solid rgb(255, 255, 255);
+        border-radius: 0.8rem;
+        box-shadow: rgb(211, 211, 211) 0 0 1.2rem;
+        margin:2rem 0 3rem 0;
+        width: 14rem;
+        height: 12rem;
+        cursor: pointer;
+    } 
+    
+    .portaditas p{
+        z-index: 1;
+        color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
+        border-bottom: white solid;
+        border-top: white solid;
+        text-align: center;
+        width: 100%;
+        height: 2rem;
+        margin:0 0 -1rem 0;
+        font-weight: 500;
+        font-size: 0.8rem;
+    }
+}

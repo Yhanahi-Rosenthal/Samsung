@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import '../css/carrusel3.css';
+import '../css/detail.css';
 import { CartContext } from "./CartContext";
 import ItemCount from "./ItemCount";
 import Toastify from 'toastify-js'

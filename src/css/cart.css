@@ -105,3 +105,39 @@
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
+
+@media screen and (max-width: 768px){
+    .containerProduct{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: solid rgba(200, 200, 200, 0.692);
+        border-width: thin;
+        width: 85%;
+        height: 9rem;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .containerProduct img{
+        width: 14%;
+    }
+    
+    .containerProduct .p{
+        font-weight: bold;
+        width: 5rem;
+        font-size: 0.7rem;
+    }
+    
+    .containerProduct .nameCart{
+        font-weight: bold;
+        font-size: 0.7rem;
+        width: 35%;
+    }
+    
+    .containerProduct .buttonProductCart{
+        font-size: 0.8rem;
+        background-color: rgba(245, 222, 179, 0);
+        border: none;
+    }
+}
