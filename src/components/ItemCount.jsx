@@ -2,14 +2,9 @@ import { useContext, useState } from "react";
 import '../css/count.css';
 import { CartContext } from "./CartContext";
 
-function ItemCount({
-    cantidad,
-    setCantidad,
-    onAdd,
-    AItem
-}){
+function ItemCount(){
 
-    const {deleteItem} = useContext(CartContext)
+    const {cantidad, setCantidad} = useContext(CartContext)
 
     let restar = ()=>{
         let desde = 1

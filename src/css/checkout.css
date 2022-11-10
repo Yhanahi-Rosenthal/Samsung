@@ -3,7 +3,7 @@
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     background-color: white;
@@ -81,7 +81,176 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 .productoCheck{
-    border: solid salmon;
-    width: 25rem;
-    height: 25rem;
+    border: solid black;
+    border-width: thin;
+    height: 23rem;
+    width: 32rem;
+}
+
+
+
+.productoChecker{
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 9rem;
+}
+
+.productoChecker::-webkit-scrollbar{
+    width: 4px;
+}
+
+.productoChecker::-webkit-scrollbar-thumb{
+    background-color: rgb(19, 40, 121);
+    border-radius: 1px;
+}
+
+.productoChecker::-webkit-scrollbar-track{
+    background-color: rgba(140, 140, 194, 0.66);
+}
+
+.productoChecker::-webkit-scrollbar-button{
+    display: none;
+}
+
+.containerProduct1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid rgba(200, 200, 200, 0.692);
+    border-width: thin;
+    width: 100%;
+    height: 9rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+.containerProduct1 img{
+    width: 20%;
+}
+
+.containerProduct1 .p1{
+    font-weight: bold;
+    font-size: 0.7rem;
+    width: 1rem;
+}
+
+.containerProduct1 .nameCart1{
+    font-weight: bold;
+    font-size: 0.7rem;
+    width: 35%;
+}
+
+.subtotal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtotal p{
+    font-size: 0.7rem;
+}
+
+.envio{
+    display: flex;
+    justify-content: space-between;
+}
+
+.envio p{
+    font-size: 0.7rem;
+}
+
+.importe{
+    display: flex;
+    justify-content: space-around;
+}
+
+.importe h3{
+    font-size: 0.7rem;
+}
+
+.containerRecibo{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 4rem 0 4rem 0;
+}
+
+/* .containerRecibo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} */
+
+.datosRecibo{
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    border: solid rgba(0, 0, 0, 0.24);
+    border-width: thin;
+}
+
+.datosRecibo h3{
+    margin-bottom: 2rem;
+}
+
+.containerProduct2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid rgba(200, 200, 200, 0.097);
+    width: 100%;
+    height: 9rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+.containerProduct2 img{
+    width: 20%;
+}
+
+.containerProduct2 .p1{
+    font-weight: bold;
+    font-size: 0.7rem;
+    width: 1rem;
+}
+
+.containerProduct2 .nameCart1{
+    font-weight: bold;
+    font-size: 0.7rem;
+    width: 35%;
+}
+
+.importe1{
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0 0 0;
+}
+
+.importe1 h3{
+    font-size: 1.3rem;
+}
+
+.importe1 p strong{
+    font-size: 1.3rem;
+}
+
+.inicioContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.linkForm{
+    text-decoration: none;
+    border: solid rgba(0, 0, 255, 0);
+    border-radius: 1rem;
+    background-color: rgb(10, 10, 136);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.5rem 4rem;
+    transition: 0.2s;
+}
+
+.linkForm:hover{
+    color: white;
+    background-color: rgb(20, 20, 149);
 }

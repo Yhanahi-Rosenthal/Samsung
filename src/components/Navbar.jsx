@@ -1,10 +1,7 @@
 import samsung from '../img/samsung.png';
 import {Link} from 'react-router-dom';
-import carrito from '../img/carrito-de-compras.png';
 import '../css/navbar.css';
-import { CartContext } from './CartContext';
-import { useContext } from 'react';
-import CardWidget from './CartWidget';
+import CartWidget from './CartWidget';
 
 function Navbar(){
 
@@ -21,7 +18,7 @@ function Navbar(){
                         <li><Link to='/category/TV' className='link'>TV's</Link></li>
                     </ul>
                 </nav>
-                <CardWidget />
+                <CartWidget />
             </div>
         </>
     )

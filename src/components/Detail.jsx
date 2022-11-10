@@ -9,14 +9,12 @@ import "toastify-js/src/toastify.css"
 
 function Detail({AItem, setLoader}){
 
-    const[cantidad, setCantidad] = useState(1)
-    const{isInCart, addItem, cart} = useContext(CartContext)
+    const{isInCart, addItem, cantidad} = useContext(CartContext)
+
     const onAdd = () =>{
         isInCart(AItem.id)
         addItem(AItem, cantidad)
-        localStorage.setItem('cart', JSON.stringify(cart))
     }
-    localStorage.setItem('cart', JSON.stringify(cart))
 
     const [nav, setNav] = useState("containerVar")
     
@@ -116,7 +114,7 @@ function Detail({AItem, setLoader}){
                             <div>
                                 <div className="containerCountDetail">
                                     <h3 className="precioDelProductoH3">PRECIO DEL PRODUCTO</h3>  
-                                    <ItemCount cantidad={cantidad} setCantidad={setCantidad} onAdd={onAdd} AItem={AItem} />
+                                    <ItemCount />
                                 </div>
                                 <p className="precioDelProductoPrice">US$ {AItem.price}</p>
                             </div>

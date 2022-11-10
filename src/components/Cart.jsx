@@ -7,29 +7,29 @@ import samsung from '../img/samsung.png';
 
 function Cart(){
 
-    const {cart, total, emptyCart, deleteItem} = useContext(CartContext)
-    const getStorage = JSON.parse(localStorage.getItem('cart'))
-    console.log(getStorage)
+    const {total, emptyCart, deleteItem, get} = useContext(CartContext)
+
     return(
         <>
             <div>
                 <div className='navCart'>
                     <img src={samsung} className='samsungCart' />
                 </div>
-                {cart.length > 0 && 
+                {get.length > 0 && 
                     <div className='titCart'>
                         <h3>Mi carrito</h3>
                         <p>Resumen de mi compra</p>
                     </div>
                 }
-              {cart.length > 0 ?
-                    cart.map((Item, index) => {
-                       return <div key={index} className='containerProduct'>
+               {get.length > 0 ?
+                    get.map((Item, cart) => {
+                       return <div key={cart} className='containerProduct'>
                             <img src={Item.img1} />
                             <p className='nameCart'>{Item.name}</p>
                             <p className='p'>US$ {Item.price}</p>
                             <p className='p'>X{Item.cantidad}</p>
                             <button onClick={()=>{deleteItem(Item.id)}} className='buttonProductCart' >Eliminar</button>
+                            
                         </div>
                     }):
                     <div className='containerNoProductos'>
@@ -37,7 +37,7 @@ function Cart(){
                     </div>
               }
                  
-                {cart.length > 0 && 
+                {get.length > 0 && 
                     <div className='containerTotalVaciar'>
                         <p>Total: US$ {total()}</p>
                         <button className='ButtonVolverATienda'><Link to='/CheckOut' className='volverATienda' >Finalizar compra</Link></button>
